@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "pas-35",
+  "kind": "rudiment",
+  "pas": 35,
+  "name": "Single Dragadiddle",
+  "formula": "A paradiddle whose first stroke becomes a same-hand diddle: R2[O], R1[C], L1[C], R2[C], R1[C].",
+  "grid": "16th",
+  "cycleLength": 8,
+  "loop": true,
+  "performanceGuide": "Unlike Drag Taps, the drag here is played by the lead hand. Strike Step 01a with Finger 2 at the rim, snap Finger 1 into Zone C, then play the closing diddle on Steps 03–04.",
+  "steps": [
+    {"id":"01a","grid":"1","velocity":"X","grace":{"type":"none"},"primary":{"hand":"R","finger":"2","zone":"O","splitZone":"split-vector"}},
+    {"id":"01b","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"02","grid":"e","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"C"}},
+    {"id":"03","grid":"&","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"2","zone":"C"}},
+    {"id":"04","grid":"a","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"05a","grid":"2","velocity":"X","grace":{"type":"none"},"primary":{"hand":"L","finger":"2","zone":"O","splitZone":"split-vector"}},
+    {"id":"05b","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"C"}},
+    {"id":"06","grid":"e","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"07","grid":"&","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"2","zone":"C"}},
+    {"id":"08","grid":"a","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"C"}}
+  ]
+}

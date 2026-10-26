@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pas-04",
+  "kind": "rudiment",
+  "pas": 4,
+  "name": "Multiple Bounce Roll (Buzz Roll)",
+  "formula": "Alternating hands, each stroke an unmeasured tremolo (B).",
+  "grid": "16th",
+  "cycleLength": 8,
+  "loop": true,
+  "performanceGuide": "Keep contact light — enough to damp the ring, not enough to choke the flutter. Flutter the pads of Fingers 1 and 2 rapidly in Zone C, overlapping each hand's decay with the next.",
+  "steps": [
+    {"id":"01","grid":"1","velocity":"%","grace":{"type":"none"},"primary":{"hand":"R","finger":"B","zone":"C"}},
+    {"id":"02","grid":"e","velocity":"%","grace":{"type":"none"},"primary":{"hand":"L","finger":"B","zone":"C"}},
+    {"id":"03","grid":"&","velocity":"%","grace":{"type":"none"},"primary":{"hand":"R","finger":"B","zone":"C"}},
+    {"id":"04","grid":"a","velocity":"%","grace":{"type":"none"},"primary":{"hand":"L","finger":"B","zone":"C"}},
+    {"id":"05","grid":"2","velocity":"%","grace":{"type":"none"},"primary":{"hand":"R","finger":"B","zone":"C"}},
+    {"id":"06","grid":"e","velocity":"%","grace":{"type":"none"},"primary":{"hand":"L","finger":"B","zone":"C"}},
+    {"id":"07","grid":"&","velocity":"%","grace":{"type":"none"},"primary":{"hand":"R","finger":"B","zone":"C"}},
+    {"id":"08","grid":"a","velocity":"%","grace":{"type":"none"},"primary":{"hand":"L","finger":"B","zone":"C"}}
+  ]
+}

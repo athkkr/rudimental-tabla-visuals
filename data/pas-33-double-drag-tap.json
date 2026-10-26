@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pas-33",
+  "kind": "rudiment",
+  "pas": 33,
+  "name": "Double Drag Tap",
+  "formula": "Two drag taps followed by an open accent: gg[.], gg[.], [X].",
+  "grid": "triplet",
+  "cycleLength": 12,
+  "loop": true,
+  "performanceGuide": "In the loop, each hand plays an accent and then two drag primaries in a row. Use the 1 → 2 → 1 rocker from #05: accent on Finger 1 in Zone O, then the primaries on Fingers 2 and 1 in Zone C. Keep both grace packets identical in spacing and volume.",
+  "steps": [
+    {"id":"01","grid":"1","velocity":".","grace":{"type":"gg","notes":[{"hand":"L","finger":"2","zone":"C"},{"hand":"L","finger":"1","zone":"C"}]},"primary":{"hand":"R","finger":"2","zone":"C"}},
+    {"id":"02","grid":".","velocity":".","grace":{"type":"gg","notes":[{"hand":"L","finger":"2","zone":"C"},{"hand":"L","finger":"1","zone":"C"}]},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"03","grid":".","velocity":"X","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"O"}},
+    {"id":"04","grid":"2","velocity":".","grace":{"type":"gg","notes":[{"hand":"R","finger":"2","zone":"C"},{"hand":"R","finger":"1","zone":"C"}]},"primary":{"hand":"L","finger":"2","zone":"C"}},
+    {"id":"05","grid":".","velocity":".","grace":{"type":"gg","notes":[{"hand":"R","finger":"2","zone":"C"},{"hand":"R","finger":"1","zone":"C"}]},"primary":{"hand":"L","finger":"1","zone":"C"}},
+    {"id":"06","grid":".","velocity":"X","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"O"}},
+    {"id":"07","grid":"3","velocity":".","grace":{"type":"gg","notes":[{"hand":"L","finger":"2","zone":"C"},{"hand":"L","finger":"1","zone":"C"}]},"primary":{"hand":"R","finger":"2","zone":"C"}},
+    {"id":"08","grid":".","velocity":".","grace":{"type":"gg","notes":[{"hand":"L","finger":"2","zone":"C"},{"hand":"L","finger":"1","zone":"C"}]},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"09","grid":".","velocity":"X","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"O"}},
+    {"id":"10","grid":"4","velocity":".","grace":{"type":"gg","notes":[{"hand":"R","finger":"2","zone":"C"},{"hand":"R","finger":"1","zone":"C"}]},"primary":{"hand":"L","finger":"2","zone":"C"}},
+    {"id":"11","grid":".","velocity":".","grace":{"type":"gg","notes":[{"hand":"R","finger":"2","zone":"C"},{"hand":"R","finger":"1","zone":"C"}]},"primary":{"hand":"L","finger":"1","zone":"C"}},
+    {"id":"12","grid":".","velocity":"X","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"O"}}
+  ]
+}
