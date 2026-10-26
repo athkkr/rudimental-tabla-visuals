@@ -19,6 +19,8 @@ This draft applies every fix from the October 25 review; the manuscript itself s
 | Claims | Flam physics corrected. Roll-threshold claim softened. Measurements marked approximate. "Dismantles" and "mastery" softened. PAS non-affiliation note added. |
 | Curriculum | Day 6 (the triple stroke roll is measured), Day 13 (uses the Etude 1 grid), Day 15 (removed the 20cm height). |
 | Structure | Subsection headings in Chapters 2–4 now match the table of contents. |
+| Fingers (0.3) | Flam grace notes now use Finger 1, matching every flam grid (the text said Finger 2). Drag grace notes fire 2 then 1. |
+| Split-zone tag (0.3) | The split-zone exception now names the `splitZone` tag used in the data files (`split-vector` / `inverted-tap-to-crack`). |
 
 **Second pass — gaps filled:**
 
@@ -195,9 +197,11 @@ Every event in the grids has a near relative in the bol vocabulary. Lineages dif
 
 ### 0.3 The Kinematics (The Finger Matrix & The Diddle Law)
 
-- **1 = Index Finger:** Alternating single strokes, open accents, and the second note of every double stroke (diddle).
-- **2 = Middle Finger** (supported by the ring finger on the left hand): The first note of every double stroke, plus flam and drag grace notes.
+- **1 = Index Finger:** Alternating single strokes, open accents, the second note of every double stroke (diddle), and every flam grace note.
+- **2 = Middle Finger** (supported by the ring finger on the left hand): The first note of every double stroke, and the first grace note of every drag.
 - **B = Tremolo Flutter (2-1-2-1):** A fast alternating flutter across the finger pads that simulates a multiple-bounce buzz roll.
+
+**Grace-note fingers:** A flam's grace note uses Finger 1 (`1/1`, `1/2`). A drag's two grace notes fire Finger 2, then Finger 1 (`21/1`), like a small diddle.
 
 **The Golden Law of the Diddle:** When one hand plays consecutive strokes (R R or L L), never bounce a single finger twice from the wrist. Instead, use a single wrist descent that fires the Middle Finger (2) and then the Index Finger (1) on the same zone. One wrist movement produces two clean, matched-pitch transients.
 
@@ -206,7 +210,7 @@ Every event in the grids has a near relative in the bol vocabulary. Lineages dif
 - **Scope:** The Law applies whenever the same hand plays primary strokes on adjacent grid steps — even when the other hand's grace notes fall between them.
 - **Three adjacent strokes:** Use the 1 → 2 → 1 rocker from the Triple Stroke Roll (#05).
 - **Grace exemption:** Grace notes are dropped from about 1cm and aren't rebounds. A grace note may follow a stroke on the same finger.
-- **Split-zone exception:** The "same zone" rule is relaxed for the Split-Vector Diddle and the Inverted Tap-to-Crack (Diagnostics 2 and 4), where the two fingers land in different zones.
+- **Split-zone exception:** The "same zone" rule is relaxed for the Split-Vector Diddle and the Inverted Tap-to-Crack (Diagnostics 2 and 4), where the two fingers land in different zones. The book's data files tag the diddle's Finger 2 stroke with `splitZone`: `split-vector` for Zone O into Zone C (Diagnostic 2), or `inverted-tap-to-crack` for Zone C into Zone O (Diagnostic 4). An untagged diddle that changes zones fails validation, so every split-zone diddle in the book must be one of these two.
 
 ### 0.4 The Time-Series Matrix (Notation Guide)
 

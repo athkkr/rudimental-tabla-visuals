@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pas-30",
+  "kind": "rudiment",
+  "pas": 30,
+  "name": "Flam Drag",
+  "formula": "A flam on the first triplet partial, a two-note diddle on the second (sub-steps a/b), and a tap on the third.",
+  "grid": "triplet",
+  "cycleLength": 12,
+  "loop": true,
+  "performanceGuide": "Keep the diddle on sub-steps 02a–02b low and quiet in Zone C. The dynamic jump from the center diddle back to the flam gives the figure its definition.",
+  "steps": [
+    {"id":"01","grid":"1","velocity":"X","grace":{"type":"g","notes":[{"hand":"L","finger":"1","zone":"C"}]},"primary":{"hand":"R","finger":"1","zone":"O"}},
+    {"id":"02a","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"2","zone":"C"}},
+    {"id":"02b","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"C"}},
+    {"id":"03","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"04","grid":"2","velocity":"X","grace":{"type":"g","notes":[{"hand":"R","finger":"1","zone":"C"}]},"primary":{"hand":"L","finger":"1","zone":"O"}},
+    {"id":"05a","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"2","zone":"C"}},
+    {"id":"05b","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"06","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"C"}},
+    {"id":"07","grid":"3","velocity":"X","grace":{"type":"g","notes":[{"hand":"L","finger":"1","zone":"C"}]},"primary":{"hand":"R","finger":"1","zone":"O"}},
+    {"id":"08a","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"2","zone":"C"}},
+    {"id":"08b","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"C"}},
+    {"id":"09","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"10","grid":"4","velocity":"X","grace":{"type":"g","notes":[{"hand":"R","finger":"1","zone":"C"}]},"primary":{"hand":"L","finger":"1","zone":"O"}},
+    {"id":"11a","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"2","zone":"C"}},
+    {"id":"11b","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"R","finger":"1","zone":"C"}},
+    {"id":"12","grid":".","velocity":".","grace":{"type":"none"},"primary":{"hand":"L","finger":"1","zone":"C"}}
+  ]
+}

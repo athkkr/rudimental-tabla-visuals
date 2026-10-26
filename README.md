@@ -7,6 +7,15 @@ Structured data and a single renderer for the visuals in *The Rudimental Tabla* 
 - [`docs/notation.md`](docs/notation.md) — notation rules (Part 0 of the book)
 - [`docs/test-cases.md`](docs/test-cases.md) — six edge-case grids the schema must handle (#35, 5.3, #30, #33, #04, #39)
 - [`docs/plan.md`](docs/plan.md) — visuals plan and build order
+- [`docs/schema.md`](docs/schema.md) — data schema, validator rules and decisions (step 1)
+
+## Run
+
+```
+npm install
+npm test        # validates every file in data/
+npm run typecheck
+```
 
 ## Starter prompt (step 1 only)
 
