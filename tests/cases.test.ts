@@ -1,4 +1,6 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, readdirSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import type { Rudiment, Stroke } from "../src/schema/types";
@@ -92,11 +94,19 @@ describe("velocity, buzz and grace rules", () => {
     expect(rules(r)).toContain("grace");
   });
 
+  it("rejects a flam grace note on Finger 2", () => {
+    const r = fresh("pas-30-flam-drag.json") as any;
+    r.steps[0].grace.notes[0].finger = "2";
+    const errs = validateRudiment(r).errors;
+    expect(errs).toHaveLength(1);
+    expect(errs[0]).toMatchObject({ rule: "grace", stepId: "01" });
+  });
+
   it("rejects a drag fired 1 then 2", () => {
     const r = fresh("pas-39-double-ratamacue.json");
     const s = step(r, "01");
     if (s.grace.type !== "gg") throw new Error("expected a drag");
-    s.grace.notes = [s.grace.notes[1], s.grace.notes[0]];
+    (s.grace as any).notes = [s.grace.notes[1], s.grace.notes[0]];
     expect(rules(r)).toContain("grace");
   });
 });
@@ -219,5 +229,17 @@ describe("tihai math: 1 + (10 + 1) + (10 + 1) + 10 = 33", () => {
     const last = r.tihai!.phrase[9]!;
     Object.assign(last, { velocity: "-", grace: { type: "none" }, primary: null });
     expect(rules(r)).toContain("tihai");
+  });
+});
+
+describe("scripts/convert-grids.mjs", () => {
+  it("reproduces data/ exactly from docs/test-cases.md", () => {
+    const out = mkdtempSync(join(tmpdir(), "grids-"));
+    const root = join(__dirname, "..");
+    execFileSync("node", ["scripts/convert-grids.mjs", "docs/test-cases.md", out], { cwd: root });
+    for (const f of files) {
+      expect(readFileSync(join(out, f), "utf8"), f).toBe(readFileSync(join(DATA, f), "utf8"));
+    }
+    expect(readdirSync(out).sort()).toEqual(files);
   });
 });

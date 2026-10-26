@@ -6,7 +6,8 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "validate": "vitest run tests/cases.test.ts"
+    "validate": "vitest run tests/cases.test.ts",
+    "convert": "node scripts/convert-grids.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",

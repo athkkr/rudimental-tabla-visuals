@@ -52,13 +52,13 @@ export interface GraceNote {
 
 /**
  * none = plain stroke
- * g    = flam: one grace note at −δ
- * gg   = drag: two grace notes at −2δ and −δ (stored in playing order)
+ * g    = flam: one grace note at −δ, on Finger 1
+ * gg   = drag: two grace notes at −2δ and −δ, on Fingers 2 then 1 (stored in playing order)
  */
 export type Grace =
   | { type: "none" }
-  | { type: "g"; notes: [GraceNote] }
-  | { type: "gg"; notes: [GraceNote, GraceNote] };
+  | { type: "g"; notes: [GraceNote & { finger: "1" }] }
+  | { type: "gg"; notes: [GraceNote & { finger: "2" }, GraceNote & { finger: "1" }] };
 
 export type GraceType = Grace["type"];
 

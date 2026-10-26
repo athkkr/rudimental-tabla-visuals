@@ -284,7 +284,7 @@ function checkStepContent(s: AnyStep, path: string, r: Report) {
     r.error("grace", `${path}.grace`, `Step ${id}: a tremolo [%] takes no grace notes.`, id);
   }
 
-  // Grace notes come from the other hand. A drag fires 2 then 1.
+  // Grace notes come from the other hand. A flam uses Finger 1; a drag fires 2 then 1.
   if (s.grace.type !== "none") {
     const notes = s.grace.notes;
     notes.forEach((g, k) => {
@@ -295,6 +295,9 @@ function checkStepContent(s: AnyStep, path: string, r: Report) {
         r.warn("grace", `${path}.grace.notes[${k}].zone`, `Step ${id}: grace notes are normally dropped in Zone C, found Zone ${g.zone}.`, id);
       }
     });
+    if (s.grace.type === "g" && s.grace.notes[0].finger !== "1") {
+      r.error("grace", `${path}.grace.notes[0].finger`, `Step ${id}: a flam's grace note uses Finger 1, found Finger ${s.grace.notes[0].finger}.`, id);
+    }
     if (s.grace.type === "gg") {
       const [a, b] = s.grace.notes;
       if (a.hand !== b.hand) r.error("grace", `${path}.grace.notes`, `Step ${id}: both drag grace notes are played by one hand.`, id);
